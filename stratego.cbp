@@ -40,6 +40,8 @@
 		<Unit filename="drawengine.h" />
 		<Unit filename="game.cpp" />
 		<Unit filename="game.h" />
+		<Unit filename="helpder.h" />
+		<Unit filename="helper.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<envvars />

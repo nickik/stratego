@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1271671391 source:/home/nick/stratego/stratego/main.cpp
+	<cstdlib>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<SDL/SDL.h>
+

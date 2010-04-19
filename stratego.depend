@@ -28,3 +28,28 @@
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 
+1271686886 source:/root/stratego/game.cpp
+	"game.h"
+
+1271686886 /root/stratego/game.h
+	"drawengine.h"
+	"helpder.h"
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+
+1271686886 /root/stratego/drawengine.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	<string>
+	"helpder.h"
+
+1271684374 /root/stratego/helpder.h
+
+1271686886 source:/root/stratego/main.cpp
+	"game.h"
+
+1271690693 source:/root/stratego/drawengine.cpp
+	"drawengine.h"
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+

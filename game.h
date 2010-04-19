@@ -5,8 +5,13 @@
  *  Created on: 19.04.2010
  *      Author: nick
  */
+
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
+
+#include "helpder.h"
+#include "SDL/SDL.h"
+#include "SDL/SDL_image.h"
 
 class game {
 public:
@@ -18,7 +23,7 @@ public:
 	bool init();
 	bool load_files();
 	bool clean_up();
-	void background_setter( (SDL_Surface *) );
+	void background_setter( SDL_Surface* );
 	(SDL_Surface *) background_getter();
 private:
     (SDL_Surface *)background;

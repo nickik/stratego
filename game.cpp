@@ -20,9 +20,6 @@ void game::background_setter( (SDL_Surface *) back )
 
 void game::clean_up()
 {
-    //Free the surface
-    SDL_FreeSurface( background );
-
     //Quit SDL
     SDL_Quit();
 }
@@ -30,10 +27,10 @@ void game::clean_up()
 bool game::load_files()
 {
     //Load the dot image
-    background = load_image( "background.png" );
+    this.background_setter(load_image( "background.png" ));
 
     //If there was a problem in loading the dot
-    if( background == NULL )
+    if( this.background_getter() == NULL )
     {
         return false;
     }
@@ -41,8 +38,13 @@ bool game::load_files()
     return true;
 }
 
-bool game::init(int SCREEN_WIDTH, int SCREEN_HEIGHT, int SCREEN_BPP)
+bool game::init((SDL_Surface *) screen)
 {
+    //Screen attributes
+    int SCREEN_WIDTH = 800;
+    int SCREEN_HEIGHT = 480;
+    int SCREEN_BPP = 32;
+
     //Initialize all SDL subsystems
     if( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
     {
@@ -69,35 +71,27 @@ bool game :: run()
 {
     bool quit = false;
 
-    //Screen attributes
-    const int SCREEN_WIDTH = 800;
-    const int SCREEN_HEIGHT = 480;
-    const int SCREEN_BPP = 32;
-
+    //The surfaces;
+    (SDL_Surface *)screen = NULL;
 
     //Initialize
-    if( init(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP) == false )
+    if( init(screen) == false )
     {
         return 1;
     }
 
     //Load the files
-    if( load_files() == false )
-    {
+    if( load_files() == false ){
         return 1;
     }
-
 
     //The frame rate
     const int FRAMES_PER_SECOND = 20;
 
-    //The surfaces
-    SDL_Surface *dot = NULL;
-    SDL_Surface *screen = NULL;
-
     //The event structure
     SDL_Event event;
 
+    //drawengine.apply_surface( 0, 0, background_getter(), screen );
 
 
 

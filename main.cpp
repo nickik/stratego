@@ -1,17 +1,9 @@
-#ifdef __cplusplus
-    #include <cstdlib>
-#else
-    #include <stdlib.h>
-#endif
-#ifdef __APPLE__
-#include <SDL/SDL.h>
-#else
-#include <SDL/SDL.h>
-#endif
+#include "game.h"
 
 int main ( int argc, char** argv )
 {
-    if (Game.run() == false)
+    game stratego;
+    if (stratego.run() == false)
     {
         printf("Error");
     }

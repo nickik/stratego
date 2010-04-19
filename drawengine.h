@@ -4,16 +4,18 @@
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
 #include <string>
+#include "helpder.h"
 
 class drawengine{
 public:
         drawengine();
-        void erase_token( int x, int y );
-        void draw_token( int x, int y );
+        virtual ~drawengine();
+        void erase_token( int , int  );
+        void draw_token( int , int  );
+        SDL_Surface* load_image( std::string );
 private:
-        (SDL_Surface *)load_image( std::string filename );
-        void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination );
-        koordinaten coordinate_to_pixel( koordinaten koords );
+        void apply_surface( int , int , SDL_Surface* , SDL_Surface* );
+        koordinaten coordinate_to_pixel( koordinaten );
 };
 
 

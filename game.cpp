@@ -7,13 +7,23 @@
 
 #include "game.h"
 
+game::game()
+{
+    //Was ist den los? ich kriege ja gar nix zu tuen hier
+}
 
-void game::background_setter( (SDL_Surface *) back )
+game::~game()
+{
+    //Was ist den los? ich kriege ja gar nix zu tuen hier
+}
+
+
+void game::background_setter( SDL_Surface * back )
 {
     background = back;
 }
 
-(SDL_Surface *) game::background_getter()
+SDL_Surface* game::background_getter()
 {
     return background;
 }
@@ -27,10 +37,11 @@ void game::clean_up()
 bool game::load_files()
 {
     //Load the dot image
-    this.background_setter(load_image( "background.png" ));
+    drawengine DE;
+    background_setter(DE.load_image( "background.png" ));
 
     //If there was a problem in loading the dot
-    if( this.background_getter() == NULL )
+    if( background_getter() == NULL )
     {
         return false;
     }
@@ -38,7 +49,7 @@ bool game::load_files()
     return true;
 }
 
-bool game::init((SDL_Surface *) screen)
+bool game::init(SDL_Surface* screen)
 {
     //Screen attributes
     int SCREEN_WIDTH = 800;
@@ -72,7 +83,7 @@ bool game :: run()
     bool quit = false;
 
     //The surfaces;
-    (SDL_Surface *)screen = NULL;
+    SDL_Surface * screen = NULL;
 
     //Initialize
     if( init(screen) == false )
@@ -86,16 +97,14 @@ bool game :: run()
     }
 
     //The frame rate
-    const int FRAMES_PER_SECOND = 20;
+    //const int FRAMES_PER_SECOND = 20;
 
     //The event structure
     SDL_Event event;
 
     //drawengine.apply_surface( 0, 0, background_getter(), screen );
 
-
-
-    while( quit = false)
+    while( quit == false)
     {
         //If the user has Xed out the window
         if( event.type == SDL_QUIT )
@@ -105,4 +114,5 @@ bool game :: run()
         }
 
     }
+    return true;
 }

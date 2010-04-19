@@ -5,9 +5,26 @@
 	<SDL/SDL.h>
 	<SDL/SDL.h>
 
-1271678216 source:/home/nick/stratego/stratego/stratego/main.cpp
-	<cstdlib>
-	<stdlib.h>
-	<SDL/SDL.h>
-	<SDL/SDL.h>
+1271693110 source:/home/nick/stratego/stratego/stratego/main.cpp
+	"game.h"
+
+1271693708 source:/home/nick/stratego/stratego/stratego/drawengine.cpp
+	"drawengine.h"
+
+1271693810 /home/nick/stratego/stratego/stratego/drawengine.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	<string>
+	"helpder.h"
+
+1271691442 /home/nick/stratego/stratego/stratego/helpder.h
+
+1271693748 source:/home/nick/stratego/stratego/stratego/game.cpp
+	"game.h"
+
+1271692602 /home/nick/stratego/stratego/stratego/game.h
+	"drawengine.h"
+	"helpder.h"
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
 

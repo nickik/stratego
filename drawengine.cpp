@@ -1,5 +1,15 @@
 #include "drawengine.h"
 
+drawengine::drawengine()
+{
+    // nix zu tun hier
+}
+
+drawengine::~drawengine()
+{
+    // nix zu tun hier
+}
+
 void drawengine::erase_token(int x, int y)
 {
   //not yet implemented
@@ -10,7 +20,7 @@ void drawengine::draw_token(int x, int y)
   //not yet implemented
 }
 
-(SDL_Surface *)drawengine::load_image( std::string filename )
+SDL_Surface* drawengine::load_image( std::string filename )
 {
     SDL_Surface* loadedImage = NULL;
     SDL_Surface* optimizedImage = NULL;
@@ -35,7 +45,8 @@ void drawengine::apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* 
     SDL_BlitSurface( source, NULL, destination, &offset );
 }
 
-koordinaten drawengine::coordinate_to_pixel()
+koordinaten drawengine::coordinate_to_pixel(koordinaten koords)
 {
   //not yet implemented
+  return koords;
 }

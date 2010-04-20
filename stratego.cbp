@@ -38,16 +38,22 @@
 		<Unit filename="cb.bmp" />
 		<Unit filename="drawengine.cpp" />
 		<Unit filename="drawengine.h" />
+		<Unit filename="feld.cpp" />
+		<Unit filename="feld.h" />
 		<Unit filename="game.cpp" />
 		<Unit filename="game.h" />
 		<Unit filename="helpder.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="soldaten.cpp" />
+		<Unit filename="soldaten.h" />
 		<Unit filename="timer.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="timer.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="token.cpp" />
+		<Unit filename="token.h" />
 		<Extensions>
 			<envvars />
 			<code_completion />

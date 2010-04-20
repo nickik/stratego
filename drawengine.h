@@ -5,6 +5,7 @@
 #include "SDL/SDL_image.h"
 #include <string>
 #include "helpder.h"
+#include "feld.h"
 
 class drawengine{
 public:

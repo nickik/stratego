@@ -1,6 +1,9 @@
 #ifndef HELPDER_H_INCLUDED
 #define HELPDER_H_INCLUDED
 
+#include "feld.h"
+
+/*
 enum boden
 {
     land = 0,
@@ -19,13 +22,6 @@ enum teamfarbe
     red
 };
 
-struct move
-{
-    //feld startfeld;
-    //feld endfeld;
-    int start;
-    int endefeld;
-};
-
+*/
 
 #endif // HELPDER_H_INCLUDED

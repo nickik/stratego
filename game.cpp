@@ -49,7 +49,7 @@ bool game::load_files()
     return true;
 }
 
-bool game::init(SDL_Surface* screen)
+SDL_Surface* game::init(SDL_Surface* screen)
 {
     //Screen attributes
     int SCREEN_WIDTH = 800;
@@ -66,16 +66,17 @@ bool game::init(SDL_Surface* screen)
     screen = SDL_SetVideoMode( SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE );
 
     //If there was an error in setting up the screen
+/*
     if( screen == NULL )
     {
         return false;
     }
-
+*/
     //Set the window caption
     SDL_WM_SetCaption( "Stratego", NULL );
 
     //If everything initialized fine
-    return true;
+    return screen;
 }
 
 bool game :: run()
@@ -86,10 +87,7 @@ bool game :: run()
     SDL_Surface * screen = NULL;
 
     //Initialize
-    if( init(screen) == false )
-    {
-        return 1;
-    }
+    screen = init(screen);
 
     //Load the files
     if( load_files() == false ){
@@ -102,8 +100,16 @@ bool game :: run()
     //The event structure
     SDL_Event event;
 
-    //drawengine.apply_surface( 0, 0, background_getter(), screen );
+    drawengine DE;
+    DE.apply_surface( 0, 0, background_getter(), screen, NULL );
 
+    if( SDL_Flip( screen ) == -1 )
+    {
+        return 1;
+    }
+
+    SDL_Delay( 2000 );
+/*
     while( quit == false)
     {
         //If the user has Xed out the window
@@ -114,5 +120,6 @@ bool game :: run()
         }
 
     }
-    return true;
+*/
+    return 0;
 }

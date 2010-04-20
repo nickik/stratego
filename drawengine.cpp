@@ -1,4 +1,5 @@
 #include "drawengine.h"
+//#include "SDL/SDL_image.h"
 
 drawengine::drawengine()
 {
@@ -25,6 +26,7 @@ SDL_Surface* drawengine::load_image( std::string filename )
     SDL_Surface* loadedImage = NULL;
     SDL_Surface* optimizedImage = NULL;
     loadedImage = IMG_Load( filename.c_str() );
+//    loadedImage = IMG_Load( "background.png" );
 
     if( loadedImage != NULL )
     {
@@ -36,7 +38,7 @@ SDL_Surface* drawengine::load_image( std::string filename )
 }
 
 
-void drawengine::apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination )
+void drawengine::apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination, SDL_Rect* clip = NULL )
 {
     SDL_Rect offset;
     offset.x = x;

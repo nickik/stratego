@@ -21,7 +21,7 @@ public:
 	bool run();
 	void getInput();
 	void SendData();
-	bool init(SDL_Surface*);
+	SDL_Surface* init(SDL_Surface*);
 	bool load_files();
 	void clean_up();
 	void background_setter( SDL_Surface* );

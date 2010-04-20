@@ -13,8 +13,8 @@ public:
         void erase_token( int , int  );
         void draw_token( int , int  );
         SDL_Surface* load_image( std::string );
+        void apply_surface( int , int , SDL_Surface* , SDL_Surface*, SDL_Rect* );
 private:
-        void apply_surface( int , int , SDL_Surface* , SDL_Surface* );
         koordinaten coordinate_to_pixel( koordinaten );
 };
 

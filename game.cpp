@@ -95,31 +95,35 @@ bool game :: run()
     }
 
     //The frame rate
-    //const int FRAMES_PER_SECOND = 20;
+    const int FRAMES_PER_SECOND = 20;
+    timer fps;
 
     //The event structure
     SDL_Event event;
 
     drawengine DE;
-    DE.apply_surface( 0, 0, background_getter(), screen, NULL );
 
-    if( SDL_Flip( screen ) == -1 )
+    while( quit == false )
     {
-        return 1;
-    }
-
-    SDL_Delay( 2000 );
-/*
-    while( quit == false)
-    {
-        //If the user has Xed out the window
-        if( event.type == SDL_QUIT )
+        fps.start();
+        while( SDL_PollEvent( &event ) )
         {
-            //Quit the program
-            quit = true;
+            if( event.type == SDL_QUIT )
+            {
+                quit = true;
+            }
         }
 
+        DE.apply_surface( 0, 0, background_getter(), screen, NULL );
+        if( SDL_Flip( screen ) == -1 )
+        {
+            return 1;
+        }
+
+        if( fps.ticks_getter() < 1000 / FRAMES_PER_SECOND )
+        {
+            SDL_Delay( ( 1000 / FRAMES_PER_SECOND ) - fps.ticks_getter() );
+        }
     }
-*/
-    return 0;
+    return true;
 }

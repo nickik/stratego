@@ -31,9 +31,10 @@
 1271748162 source:/root/stratego/game.cpp
 	"game.h"
 
-1271747369 /root/stratego/game.h
+1271763107 /root/stratego/game.h
 	"drawengine.h"
 	"helpder.h"
+	"timer.h"
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 
@@ -45,9 +46,13 @@
 
 1271684374 /root/stratego/helpder.h
 
-1271738604 source:/root/stratego/main.cpp
+1271756496 source:/root/stratego/main.cpp
 	"game.h"
 
-1271747746 source:/root/stratego/drawengine.cpp
+1271762807 source:/root/stratego/drawengine.cpp
 	"drawengine.h"
+
+1271756974 /root/stratego/timer.h
+	"SDL/SDL.h"
+	<sstream>
 

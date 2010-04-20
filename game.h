@@ -12,6 +12,7 @@
 #include "drawengine.h"
 #include "helpder.h"
 #include "timer.h"
+#include "network.h"
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
 

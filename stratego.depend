@@ -28,7 +28,7 @@
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 
-1271748162 source:/root/stratego/game.cpp
+1271763153 source:/root/stratego/game.cpp
 	"game.h"
 
 1271763107 /root/stratego/game.h

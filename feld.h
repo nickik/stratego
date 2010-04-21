@@ -1,8 +1,6 @@
 #ifndef FELD_H_INCLUDED
 #define FELD_H_INCLUDED
 
-#include "game.h"
-#include "helpder.h"
 #include "token.h"
 
 enum boden
@@ -19,22 +17,20 @@ struct koordinaten
 
 class feld{
 private:
-    bool besetzt;
     boden bodenbeschafenheit;
-    token spielstein;
     koordinaten kords;
+    token spielstein; // C irgendwie false or einbauen???
 public:
-    feld(bool, boden, token);
+    feld();
+    feld(boden, koordinaten, token);
     ~feld();
-    void besetzt_setter(bool);
-    bool besetzt_getter();
     void bodenbeschafenheit_setter(boden);
     boden bodenbeschafenheit_getter();
+    void kords_setter(koordinaten);
+    koordinaten kords_getter();
     void spielstein_setter(token);
     token spielstein_getter();
-    void kords_setter(koordinaten);
-    koordinaten kords_setter();
+    bool valid();
 };
-
 
 #endif // FELD_H_INCLUDED

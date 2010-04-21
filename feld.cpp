@@ -1,43 +1,51 @@
 #include "feld.h"
 
-feld(bool b, boden bo, token t){
-    besetzt_setter(bool b);
-    bodenbeschafenheit_setter(boden bo);
-    spielstein_setter(token t);
+feld::feld(boden b, koordinaten k, token t)
+{
+    bodenbeschafenheit_setter(b);
+    kords_setter(k);
+    spielstein_setter(t);
 }
 
-~token(){
+feld::feld()
+{
+}
+
+feld::~feld(){
     //kei ahnig was da ahne chunt
 }
 
-void besetzt_setter(bool b){
-    besetzt = b;
-}
-
-bool besetzt_getter(){
-    return besetzt;
-}
-
-void bodenbeschafenheit_setter(boden b){
+void feld::bodenbeschafenheit_setter(boden b){
     bodenbeschafenheit = b;
 }
 
-boden bodenbeschafenheit_getter(){
+boden feld::bodenbeschafenheit_getter(){
     return bodenbeschafenheit;
 }
 
-void spielstein_setter(token t){
+void feld::kords_setter(koordinaten k){
+    kords = k;
+}
+
+koordinaten feld::kords_getter(){
+    return kords;
+}
+
+void feld::spielstein_setter(token t)
+{
     spielstein = t;
 }
 
-token spielstein_getter(){
+token feld::spielstein_getter()
+{
     return spielstein;
 }
 
-void kords_setter(koordinaten){
-    kords = koordinaten;
-}
-
-koordinaten kords_setter(){
-    return koordinaten;
+bool feld::valid()
+{
+    if(bodenbeschafenheit_getter() == land)
+    {
+        return true;
+    }
+    return false;
 }

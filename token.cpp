@@ -1,10 +1,13 @@
 #include "token.h"
 
-token::token(figur toeggel, teamfarbe farb, position posi)
+token::token()
 {
-    figur_setter(toeggel);
-    team_setter(farb);
-    position_setter(posi);
+}
+
+token::token(figur f, teamfarbe t)
+{
+    figur_setter(f);
+    team_setter(t);
 }
 
 token::~token()
@@ -12,28 +15,29 @@ token::~token()
     //weisi nanig
 }
 
-void token::figur_setter(figur spielstei);
+void token::figur_setter(figur spielstei)
 {
     spielfigur = spielstei;
 }
 
-figur token::figur_getter();
+figur token::figur_getter()
 {
     return spielfigur;
 }
 
-void token::team_setter(teamfarbe farb);
+void token::team_setter(teamfarbe farb)
 {
     team = farb;
 }
 
-teamfarbe token::team_getter();
+teamfarbe token::team_getter()
 {
     return team;
 }
-
+/*
 void token::position_setter(feld spielfeld);
 {
+    spielfeld.spielfigur_setter(this);
     position = spielfeld;
 }
 
@@ -41,3 +45,4 @@ feld token::position_getter();
 {
     return position;
 }
+*/

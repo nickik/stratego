@@ -1,5 +1,6 @@
 #include "soldaten.h"
 
+/*
 bool soldaten::move(feld zug)
 {
      if(isGround(zug) == true)
@@ -14,7 +15,7 @@ bool soldaten::move(feld zug)
 
      if(isEmpty(zug) == true)
      {
-         makemove(zug);
+         //makemove(zug);
          return true;
      }
 
@@ -22,7 +23,7 @@ bool soldaten::move(feld zug)
      {
          if(fight(zug) == true)
          {
-             makemove(zug);
+             //makemove(zug);
              return true;
          }
          else
@@ -35,7 +36,7 @@ bool soldaten::move(feld zug)
 
 bool soldaten::isGround(feld zug)
 {
-    if(zug.bodenbeschaffenheit_getter() == land)
+    if(zug.bodenbeschafenheit_getter() == land)
     {
         return true;
     }
@@ -47,9 +48,8 @@ bool soldaten::isGround(feld zug)
 
 bool soldaten::isTeam(feld zug)
 {
-    token zielstein;
     zielstein = zug.spielstein_getter();
-    if (zielstein.team_getter() == this.team_getter())
+    if(zielstein.team_getter() == this.team_getter())
     {
         return true;
     }
@@ -72,6 +72,7 @@ bool soldaten::isEmpty(feld zug)
         return false;
     }
 }
+*/
 
 bool soldaten::fight(feld zug)
 {
@@ -83,5 +84,5 @@ bool soldaten::fight(feld zug)
 void soldaten::highlight()
 {
     //hier wird voresrst nichts implementiert
-
 }
+

@@ -5,23 +5,22 @@
 	<SDL/SDL.h>
 	<SDL/SDL.h>
 
-1271693110 source:/home/nick/stratego/stratego/stratego/main.cpp
+1271861834 source:/home/nick/stratego/stratego/stratego/main.cpp
 	"game.h"
 
 1271756392 source:/home/nick/stratego/stratego/stratego/drawengine.cpp
 	"drawengine.h"
 
-1271776211 /home/nick/stratego/stratego/stratego/drawengine.h
+1271858112 /home/nick/stratego/stratego/stratego/drawengine.h
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	<string>
-	"helpder.h"
 	"feld.h"
 
-1271776110 /home/nick/stratego/stratego/stratego/helpder.h
+1271780630 /home/nick/stratego/stratego/stratego/helpder.h
 	"feld.h"
 
-1271693748 source:/home/nick/stratego/stratego/stratego/game.cpp
+1271771005 source:/home/nick/stratego/stratego/stratego/game.cpp
 	"game.h"
 
 1271771005 /home/nick/stratego/stratego/stratego/game.h
@@ -63,12 +62,18 @@
 	"SDL/SDL.h"
 	<sstream>
 
-1271776943 /home/nick/stratego/stratego/stratego/feld.h
-	"game.h"
-	"helpder.h"
+1271863784 /home/nick/stratego/stratego/stratego/feld.h
 	"token.h"
 
-1271776498 /home/nick/stratego/stratego/stratego/token.h
-	"helpder.h"
+1271864118 /home/nick/stratego/stratego/stratego/token.h
+
+1271864817 source:/home/nick/stratego/stratego/stratego/feld.cpp
+	"feld.h"
+
+1271863682 source:/home/nick/stratego/stratego/stratego/soldaten.cpp
+	"soldaten.h"
+
+1271862880 /home/nick/stratego/stratego/stratego/soldaten.h
+	"token.h"
 	"feld.h"
 

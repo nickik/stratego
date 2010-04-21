@@ -1,6 +1,5 @@
 #include "feld.h"
 
-
 feld::feld(boden b, koordinaten k, token t)
 {
     bodenbeschafenheit_setter(b);
@@ -42,7 +41,7 @@ token feld::spielstein_getter()
     return spielstein;
 }
 
-bool feld::isGround()
+bool feld::valid()
 {
     if(bodenbeschafenheit_getter() == land)
     {

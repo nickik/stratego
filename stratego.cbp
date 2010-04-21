@@ -42,6 +42,8 @@
 		<Unit filename="feld.h" />
 		<Unit filename="game.cpp" />
 		<Unit filename="game.h" />
+		<Unit filename="level.cpp" />
+		<Unit filename="level.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="soldaten.cpp" />
 		<Unit filename="soldaten.h" />

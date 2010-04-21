@@ -19,7 +19,7 @@ class feld{
 private:
     boden bodenbeschafenheit;
     koordinaten kords;
-    token spielstein;
+    token spielstein; // C irgendwie false or einbauen???
 public:
     feld();
     feld(boden, koordinaten, token);
@@ -30,7 +30,7 @@ public:
     koordinaten kords_getter();
     void spielstein_setter(token);
     token spielstein_getter();
-    bool isGround();
+    bool valid();
 };
 
 #endif // FELD_H_INCLUDED

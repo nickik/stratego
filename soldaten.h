@@ -4,7 +4,7 @@
 #include "token.h"
 #include "feld.h"
 
-class soldaten : public token  {
+class soldaten : public token{
 private:
     bool fight(feld);
 public:

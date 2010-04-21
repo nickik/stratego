@@ -17,7 +17,6 @@ game::~game()
     //Was ist den los? ich kriege ja gar nix zu tuen hier
 }
 
-
 void game::background_setter( SDL_Surface * back )
 {
     background = back;

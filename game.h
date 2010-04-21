@@ -10,7 +10,7 @@
 #define GAME_H_INCLUDED
 
 #include "drawengine.h"
-#include "helpder.h"
+#include "level.h"
 #include "timer.h"
 #include "network.h"
 #include "SDL/SDL.h"

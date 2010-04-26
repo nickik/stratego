@@ -15,6 +15,7 @@
 #include "network.h"
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
+#include "SDL/SDL_ttf.h"
 
 class game {
 public:
@@ -28,8 +29,11 @@ public:
 	void clean_up();
 	void background_setter( SDL_Surface* );
 	SDL_Surface* background_getter();
+	void font_setter( TTF_Font* );
+	TTF_Font* font_getter();
 private:
     SDL_Surface* background;
+    TTF_Font* font;
 };
 
 #endif // GAME_H_INCLUDED

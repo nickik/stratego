@@ -27,16 +27,6 @@ SDL_Surface* game::background_getter()
     return background;
 }
 
-void game::font_setter( TTF_Font * ttf )
-{
-    font = ttf;
-}
-
-TTF_Font* game::font_getter()
-{
-    return font;
-}
-
 void game::clean_up()
 {
     //Quit SDL
@@ -55,14 +45,6 @@ bool game::load_files()
         return false;
     }
 
-    //Load the font
-    font_setter( TTF_OpenFont( "bandy.ttf", 24 ));
-
-    if( font_getter() == NULL )
-    {
-        return false;
-    }
-
     //If everything loaded fine
     return true;
 }
@@ -76,11 +58,6 @@ SDL_Surface* game::init(SDL_Surface* screen)
 
     //Initialize all SDL subsystems
     if( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
-    {
-        return false;
-    }
-
-    if( TTF_Init()  == -1 )
     {
         return false;
     }
@@ -109,14 +86,11 @@ bool game :: run()
     //The surfaces;
     SDL_Surface * screen = NULL;
 
-    //The font
-    SDL_Surface * message = NULL;
-
     //Initialize
     screen = init(screen);
 
     //The fontcolor
-    SDL_Color fontcolor = { 255, 255, 255 };
+//    SDL_Color fontcolor = { 255, 255, 255 };
 
     //Load the files
     if( load_files() == false ){
@@ -131,8 +105,7 @@ bool game :: run()
     SDL_Event event;
 
     drawengine DE;
-
-    message = TTF_RenderText_Solid( font_getter(), "just a test", fontcolor );
+    menu MN_start = menu( 520, 50, 70, 25, 520, 50, screen, "start game" );
 
     while( quit == false )
     {
@@ -146,7 +119,9 @@ bool game :: run()
         }
 
         DE.apply_surface( 0, 0, background_getter(), screen, NULL );
-        DE.apply_surface( 520, 50, message, screen, NULL );
+        //MN.draw( screen );
+        MN_start.handle_events( event );
+
         if( SDL_Flip( screen ) == -1 )
         {
             return 1;

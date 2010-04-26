@@ -30,17 +30,17 @@
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 
-1272268988 source:/root/stratego/game.cpp
+1272290657 source:/root/stratego/game.cpp
 	"game.h"
 
-1272267653 /root/stratego/game.h
+1272278806 /root/stratego/game.h
 	"drawengine.h"
 	"level.h"
 	"timer.h"
 	"network.h"
+	"menu.h"
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
-	"SDL/SDL_ttf.h"
 
 1271914832 /root/stratego/drawengine.h
 	"SDL/SDL.h"
@@ -50,7 +50,7 @@
 
 1271684374 /root/stratego/helpder.h
 
-1271756496 source:/root/stratego/main.cpp
+1272285286 source:/root/stratego/main.cpp
 	"game.h"
 
 1271762807 source:/root/stratego/drawengine.cpp
@@ -111,4 +111,9 @@
 
 1271914833 source:/root/stratego/token.cpp
 	"token.h"
+
+1272289426 /root/stratego/menu.h
+	<string>
+	"SDL/SDL_ttf.h"
+	"drawengine.h"
 

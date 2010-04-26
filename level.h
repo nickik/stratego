@@ -3,10 +3,10 @@
 
 #include "feld.h"
 
+
 class level{
 private:
-    //LEVEL MAP
-    //map<feld>
+    feld spielfeld[10][10];
 public:
     level();
     ~level();
@@ -14,7 +14,6 @@ public:
     bool validmove(feld,feld);
     bool load_aufstellung( /*string*/ char filename );
     bool init_feld();
-
 };
 
 #endif // LEVEL_H_INCLUDED

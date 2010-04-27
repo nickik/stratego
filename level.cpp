@@ -180,7 +180,6 @@ bool level::feldadd(std::string team, int id, std::string spielfigur)
     return true;
 }
 
-
 figur level::string_to_figur(std::string spielfigur)
 {
     if (spielfigur == "1")

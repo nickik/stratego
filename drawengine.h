@@ -17,9 +17,9 @@ public:
         virtual ~drawengine();
         void erase_token(int,int);
         void draw_token( int, int, figur, teamfarbe);
+        void apply_surface( int, int, SDL_Surface*, SDL_Surface*, SDL_Rect* );
         SDL_Rect SDL_rec(figur, teamfarbe);
-        void apply_surface( int , int , SDL_Surface* , SDL_Surface*, SDL_Rect* );
-        static SDL_Surface* load_image(std::string );
+        SDL_Surface* load_image(std::string );
 private:
         void coordinate_to_pixel( int*,int* );
 };

@@ -62,20 +62,84 @@ bool game::init()
     }
 
     //Set up the screen
-//    drawengine::screen_setter( SDL_SetVideoMode( SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE ));
-
     token_image = drawengine::load_image( "tokens.png" );
+    screen =  SDL_SetVideoMode( SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE );
+
+    set_token_clips();
 
     //Set the window caption
     SDL_WM_SetCaption( "Stratego", NULL );
 }
 
+void set_token_clips()
+{
+    const int TOKEN_H = 42;
+
+    token_clips[0].x = 0;
+    token_clips[0].y = 0;
+    token_clips[0].h = TOKEN_H;
+    token_clips[0].w = TOKEN_H;
+
+    token_clips[1].x = TOKEN_H;
+    token_clips[1].y = 0;
+    token_clips[1].h = TOKEN_H;
+    token_clips[1].w = TOKEN_H;
+
+    token_clips[2].x = TOKEN_H * 2;
+    token_clips[2].y = 0;
+    token_clips[2].h = TOKEN_H;
+    token_clips[2].w = TOKEN_H;
+
+    token_clips[3].x = TOKEN_H * 3;
+    token_clips[3].y = 0;
+    token_clips[3].h = TOKEN_H;
+    token_clips[3].w = TOKEN_H;
+
+    token_clips[4].x = TOKEN_H * 4;
+    token_clips[4].y = 0;
+    token_clips[4].h = TOKEN_H;
+    token_clips[4].w = TOKEN_H;
+
+    token_clips[5].x = TOKEN_H * 5;
+    token_clips[5].y = 0;
+    token_clips[5].h = TOKEN_H;
+    token_clips[5].w = TOKEN_H;
+
+    token_clips[6].x = 0;
+    token_clips[6].y = TOKEN_H;
+    token_clips[6].h = TOKEN_H;
+    token_clips[6].w = TOKEN_H;
+
+    token_clips[7].x = TOKEN_H;
+    token_clips[7].y = TOKEN_H;
+    token_clips[7].h = TOKEN_H;
+    token_clips[7].w = TOKEN_H;
+
+    token_clips[8].x = TOKEN_H * 2;
+    token_clips[8].y = TOKEN_H;
+    token_clips[8].h = TOKEN_H;
+    token_clips[8].w = TOKEN_H;
+
+    token_clips[9].x = TOKEN_H * 3;
+    token_clips[9].y = TOKEN_H;
+    token_clips[9].h = TOKEN_H;
+    token_clips[9].w = TOKEN_H;
+
+    token_clips[10].x = TOKEN_H * 4;
+    token_clips[10].y = TOKEN_H;
+    token_clips[10].h = TOKEN_H;
+    token_clips[10].w = TOKEN_H;
+
+    token_clips[11].x = TOKEN_H * 5;
+    token_clips[11].y = TOKEN_H;
+    token_clips[11].h = TOKEN_H;
+    token_clips[11].w = TOKEN_H;
+}
+
+
 bool game :: run()
 {
     bool quit = false;
-
-    //The surfaces;
-    SDL_Surface * screen = NULL;
 
     //Initialize
     init();
@@ -99,15 +163,6 @@ bool game :: run()
     menu MN_end( 550, 150, 70, 25, "end game" );
     menu MN_about( 520, 200, 70, 25, "about Stratego" );
     menu MN_quit( 520, 250, 70, 25, "quit game" );
-
-/*
-    level l;
-    if(aufstellung(l) == false)
-    {
-        return false;
-    }
-*/
-
 
     while( quit == false )
     {

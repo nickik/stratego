@@ -20,15 +20,15 @@ void drawengine::erase_token(int x, int y)
 void drawengine::draw_token(int x, int y, figur f, teamfarbe t)
 {
     SDL_Rect rec = SDL_rec( f, t );
-//    apply_surface( x, y, drawengine::token_image_getter(), drawengine::screen_getter(), &rec);
+    apply_surface( x, y, token_image, screen, &rec);
 }
 
 SDL_Rect drawengine::SDL_rec(figur f, teamfarbe t)
 {
-    //return drawengine::token_clips[ (((int)f) - 1) ];
+    return token_clips[ (((int)f) - 1) ];
 }
 
-static SDL_Surface* load_image( std::string filename )
+SDL_Surface* drawengine::load_image( std::string filename )
 {
     SDL_Surface* loadedImage = NULL;
     SDL_Surface* optimizedImage = NULL;
@@ -39,7 +39,6 @@ static SDL_Surface* load_image( std::string filename )
         optimizedImage = SDL_DisplayFormat( loadedImage );
         SDL_FreeSurface( loadedImage );
     }
-
     return optimizedImage;
 }
 
@@ -54,5 +53,10 @@ void drawengine::apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* 
 
 void drawengine::coordinate_to_pixel(int* x, int* y)
 {
+    int OBEN = 17;
+    int LINKS =  17;
+
+    x[1] = (x[1] * 42) + LINKS;
+    y[1] = (y[1] * 42) + OBEN;
 
 }

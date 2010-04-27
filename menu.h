@@ -9,23 +9,27 @@
 
 class menu{
 public:
-    menu( int, int, int, int, int, int, SDL_Surface*, std::string message );
+    menu( int, int, int, int, std::string message );
+//    menu();
     virtual ~menu();
     bool init();
 	void font_setter( TTF_Font* );
-	void draw( SDL_Surface*, int, int );
+	void draw( SDL_Surface* );
 //    button( int, int, int, int );
     void handle_events( SDL_Event );
 	TTF_Font* font_getter();
 	SDL_Color active_getter();
 	SDL_Color inactive_getter();
-private:
+
     TTF_Font* font;
     SDL_Color active;
     SDL_Color inactive;
     SDL_Rect box;
     std::string msg;
-
+    SDL_Surface* scr;
+    int my;
+    int mx;
+private:
 };
 
 #endif // MENU_H_INCLUDED

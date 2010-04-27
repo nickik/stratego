@@ -89,9 +89,6 @@ bool game :: run()
     //Initialize
     screen = init(screen);
 
-    //The fontcolor
-//    SDL_Color fontcolor = { 255, 255, 255 };
-
     //Load the files
     if( load_files() == false ){
         return 1;
@@ -105,7 +102,11 @@ bool game :: run()
     SDL_Event event;
 
     drawengine DE;
-    menu MN_start = menu( 520, 50, 70, 25, 520, 50, screen, "start game" );
+    menu MN_start( 520, 50, 70, 25,  "start game" );
+    menu MN_join( 550, 100, 70, 25, "join game" );
+    menu MN_end( 550, 150, 70, 25, "end game" );
+    menu MN_about( 520, 200, 70, 25, "about Stratego" );
+    menu MN_quit( 520, 250, 70, 25, "quit game" );
 
     while( quit == false )
     {
@@ -119,8 +120,18 @@ bool game :: run()
         }
 
         DE.apply_surface( 0, 0, background_getter(), screen, NULL );
-        //MN.draw( screen );
+
+        MN_start.draw( screen );
+        MN_join.draw( screen );
+        MN_end.draw( screen );
+        MN_about.draw( screen );
+        MN_quit.draw( screen );
+
         MN_start.handle_events( event );
+        MN_join.handle_events( event );
+        MN_end.handle_events( event );
+        MN_about.handle_events( event );
+        MN_quit.handle_events( event );
 
         if( SDL_Flip( screen ) == -1 )
         {

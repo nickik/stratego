@@ -1,4 +1,9 @@
 #include "game.h"
+#include "SDL/SDL.h"
+
+SDL_Rect token_clips[12];
+SDL_Surface* screen;
+
 
 int main ( int argc, char** argv )
 {

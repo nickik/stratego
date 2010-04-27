@@ -40,7 +40,7 @@ void menu::draw()
     message = TTF_RenderText_Solid( font_getter(), msg.c_str(), active_getter() );
 
     //apply message to screen
-    DE.apply_surface( this->box.x, this->box.y, message,  drawengine::screen_getter(), NULL );
+    DE.apply_surface( this->box.x, this->box.y, message, screen, NULL );
 }
 
 void menu::font_setter( TTF_Font * ttf )

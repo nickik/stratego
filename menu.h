@@ -4,6 +4,7 @@
 #include <string>
 #include "SDL/SDL_ttf.h"
 #include "drawengine.h"
+#include "globals.h"
 
 //SDL_Event m_event;
 

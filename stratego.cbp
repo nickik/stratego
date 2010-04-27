@@ -48,6 +48,7 @@
 		</Unit>
 		<Unit filename="game.cpp" />
 		<Unit filename="game.h" />
+		<Unit filename="globals.h" />
 		<Unit filename="helper.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

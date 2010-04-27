@@ -14,6 +14,7 @@
 #include "network.h"
 #include "menu.h"
 #include "level.h"
+#include "globals.h"
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
 

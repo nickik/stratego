@@ -62,9 +62,9 @@ bool game::init()
     }
 
     //Set up the screen
-    drawengine::screen_setter( SDL_SetVideoMode( SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE ));
+//    drawengine::screen_setter( SDL_SetVideoMode( SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE ));
 
-    drawengine::set_token_clips();
+    token_image = drawengine::load_image( "tokens.png" );
 
     //Set the window caption
     SDL_WM_SetCaption( "Stratego", NULL );
@@ -120,7 +120,7 @@ bool game :: run()
             }
         }
 
-        DE.apply_surface( 0, 0, background_getter(), drawengine::screen_getter(), NULL );
+        DE.apply_surface( 0, 0, background_getter(), screen, NULL );
 
         MN_start.draw();
         MN_join.draw();

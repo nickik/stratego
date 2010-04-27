@@ -24,8 +24,9 @@ private:
 public:
     feld();
     feld(boden, koordinaten, token);
-    feld(boden, int, int);
     feld(boden,int,int,token);
+    feld(boden, int, int);
+    feld(boden, koordinaten);
     ~feld();
     void bodenbeschafenheit_setter(boden);
     boden bodenbeschafenheit_getter();
@@ -37,6 +38,7 @@ public:
     bool valid();
     bool stein_getter();
     void stein_setter(bool);
+    void draw();
 };
 
 #endif // FELD_H_INCLUDED

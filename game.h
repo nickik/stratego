@@ -30,6 +30,7 @@ public:
 	void background_setter( SDL_Surface* );
 	SDL_Surface* background_getter();
 private:
+    bool aufstellung(level);
     SDL_Surface* background;
 };
 

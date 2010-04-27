@@ -31,6 +31,13 @@ feld::feld(boden b, int i, int n)
     stein_setter(false);
 }
 
+feld::feld(boden b, koordinaten k)
+{
+    bodenbeschafenheit_setter(b);
+    kords_setter(k);
+    stein_setter(false);
+}
+
 feld::feld()
 {
     stein_setter(false);
@@ -84,4 +91,8 @@ bool feld::valid()
     return false;
 }
 
-
+void feld::draw()
+{
+    drawengine de;
+    //de.draw_token(kords_getter(), spielstein_getter().figur_getter(), spielstein_getter().team_getter());
+}

@@ -1,10 +1,12 @@
 #ifndef TOKEN_H_INCLUDED
 #define TOKEN_H_INCLUDED
 
+#include "drawengine.h"
 
 enum teamfarbe{
     blue = 0,
-    red
+    red,
+    empty
 };
 
 enum figur{
@@ -18,7 +20,9 @@ enum figur{
     Mineur,
     Aufklaehrer,
     Spion,
-    Bombe
+    Bombe,
+    Fahne,
+    Leer
 };
 
 class token{

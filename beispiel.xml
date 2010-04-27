@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<stratego>
+<feld>
+	<id>1</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>2</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>3</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>4</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>5</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>6</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>7</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>8</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>9</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>10</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>12</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>12</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>13</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>14</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>15</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>16</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>17</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>18</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>19</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>20</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>21</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>22</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>23</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>24</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>25</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>26</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>27</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>28</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>29</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>30</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>31</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>32</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>33</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>34</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>35</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>36</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>37</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>38</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>39</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>40</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>41</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>42</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>43</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>44</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>45</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>46</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>47</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>48</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>49</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>50</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>51</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>52</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>53</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>54</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>55</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>56</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>57</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>58</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>59</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>60</id>
+	<team>empty</team>
+	<spielfigur>0</spielfigur>
+</feld>
+<feld>
+	<id>61</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>62</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>63</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>64</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>65</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>66</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>67</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>68</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>69</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>70</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>71</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>72</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>73</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>74</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>75</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>76</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>77</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>78</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>79</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>80</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>81</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>82</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>83</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>84</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>85</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>86</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>86</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>87</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>88</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>89</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>90</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>91</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>92</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>93</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>94</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>95</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>96</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>97</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>98</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>99</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+<feld>
+	<id>100</id>
+	<team>blau</team>
+	<spielfigur>9</spielfigur>
+</feld>
+</stratego>

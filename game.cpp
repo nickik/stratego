@@ -79,6 +79,11 @@ SDL_Surface* game::init(SDL_Surface* screen)
     return screen;
 }
 
+bool  game::aufstellung(level l)
+{
+    return false;
+}
+
 bool game :: run()
 {
     bool quit = false;
@@ -94,6 +99,7 @@ bool game :: run()
         return 1;
     }
 
+
     //The frame rate
     const int FRAMES_PER_SECOND = 20;
     timer fps;
@@ -107,6 +113,14 @@ bool game :: run()
     menu MN_end( 550, 150, 70, 25, "end game" );
     menu MN_about( 520, 200, 70, 25, "about Stratego" );
     menu MN_quit( 520, 250, 70, 25, "quit game" );
+
+    level l;
+    if(aufstellung(l) == false)
+    {
+        return false;
+    }
+
+
 
     while( quit == false )
     {

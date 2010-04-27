@@ -2,28 +2,8 @@
 #define TOKEN_H_INCLUDED
 
 #include "drawengine.h"
+#include "helper.h"
 
-enum teamfarbe{
-    blue = 0,
-    red,
-    empty
-};
-
-enum figur{
-    Feldmarschall = 1,
-    General,
-    Oberst,
-    Major,
-    Hauptmann,
-    Leutnant,
-    Unteroffizier,
-    Mineur,
-    Aufklaehrer,
-    Spion,
-    Bombe,
-    Fahne,
-    Leer
-};
 
 class token{
 private:

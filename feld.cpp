@@ -10,31 +10,19 @@ bool feld::stein_getter()
     return stein;
 }
 
-feld::feld(boden b, koordinaten k, token t)
-{
-    bodenbeschafenheit_setter(b);
-    kords_setter(k);
-    spielstein_setter(t);
-    stein_setter(true);
-}
 feld::feld(boden b, int i, int n, token t)
 {
     bodenbeschafenheit_setter(b);
-    kords_setter(i,n);
+    kx_setter( i );
+    ky_setter( n );
     spielstein_setter(t);
     stein_setter(true);
 }
 feld::feld(boden b, int i, int n)
 {
     bodenbeschafenheit_setter(b);
-    kords_setter(i,n);
-    stein_setter(false);
-}
-
-feld::feld(boden b, koordinaten k)
-{
-    bodenbeschafenheit_setter(b);
-    kords_setter(k);
+    kx_setter( i );
+    ky_setter( n );
     stein_setter(false);
 }
 
@@ -53,21 +41,6 @@ void feld::bodenbeschafenheit_setter(boden b){
 
 boden feld::bodenbeschafenheit_getter(){
     return bodenbeschafenheit;
-}
-
-void feld::kords_setter(koordinaten k){
-    kords = k;
-}
-
-void feld::kords_setter(int i, int n){
-    koordinaten k;
-    k.x = i;
-    k.y = n;
-    kords = k;
-}
-
-koordinaten feld::kords_getter(){
-    return kords;
 }
 
 void feld::spielstein_setter(token t)
@@ -95,4 +68,24 @@ void feld::draw()
 {
     drawengine de;
     //de.draw_token(kords_getter(), spielstein_getter().figur_getter(), spielstein_getter().team_getter());
+}
+
+void feld::kx_setter( int x )
+{
+    kx = x;
+}
+
+int feld::kx_getter()
+{
+    return kx;
+}
+
+void feld::ky_setter( int y )
+{
+    ky = y;
+}
+
+int feld::ky_getter()
+{
+    return ky;
 }

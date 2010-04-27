@@ -35,13 +35,22 @@
 		<Linker>
 			<Add option="menu.cpp timer.cpp `sdl-config --libs` -lSDL_image -lSDL_net -lSDL_ttf `xml2-config --libs`" />
 		</Linker>
+		<Unit filename="boden.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="cb.bmp" />
 		<Unit filename="drawengine.cpp" />
 		<Unit filename="drawengine.h" />
 		<Unit filename="feld.cpp" />
 		<Unit filename="feld.h" />
+		<Unit filename="figur.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="game.cpp" />
 		<Unit filename="game.h" />
+		<Unit filename="helper.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="level.cpp" />
 		<Unit filename="level.h" />
 		<Unit filename="main.cpp" />
@@ -59,6 +68,9 @@
 		</Unit>
 		<Unit filename="soldaten.cpp" />
 		<Unit filename="soldaten.h" />
+		<Unit filename="teamfarbe.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="timer.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

@@ -36,8 +36,7 @@ void game::clean_up()
 bool game::load_files()
 {
     //Load the dot image
-    drawengine DE;
-    background_setter(DE.load_image( "background.png" ));
+    background_setter(drawengine::load_image( "background.png" ));
 
     //If there was a problem in loading the dot
     if( background_getter() == NULL )
@@ -49,7 +48,7 @@ bool game::load_files()
     return true;
 }
 
-SDL_Surface* game::init(SDL_Surface* screen)
+bool game::init()
 {
     //Screen attributes
     int SCREEN_WIDTH = 800;
@@ -63,25 +62,12 @@ SDL_Surface* game::init(SDL_Surface* screen)
     }
 
     //Set up the screen
-    screen = SDL_SetVideoMode( SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE );
+    drawengine::screen_setter( SDL_SetVideoMode( SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE ));
 
-    //If there was an error in setting up the screen
-/*
-    if( screen == NULL )
-    {
-        return false;
-    }
-*/
+    drawengine::set_token_clips();
+
     //Set the window caption
     SDL_WM_SetCaption( "Stratego", NULL );
-
-    //If everything initialized fine
-    return screen;
-}
-
-bool  game::aufstellung(level l)
-{
-    return false;
 }
 
 bool game :: run()
@@ -92,7 +78,7 @@ bool game :: run()
     SDL_Surface * screen = NULL;
 
     //Initialize
-    screen = init(screen);
+    init();
 
     //Load the files
     if( load_files() == false ){
@@ -114,12 +100,13 @@ bool game :: run()
     menu MN_about( 520, 200, 70, 25, "about Stratego" );
     menu MN_quit( 520, 250, 70, 25, "quit game" );
 
+/*
     level l;
     if(aufstellung(l) == false)
     {
         return false;
     }
-
+*/
 
 
     while( quit == false )
@@ -133,13 +120,13 @@ bool game :: run()
             }
         }
 
-        DE.apply_surface( 0, 0, background_getter(), screen, NULL );
+        DE.apply_surface( 0, 0, background_getter(), drawengine::screen_getter(), NULL );
 
-        MN_start.draw( screen );
-        MN_join.draw( screen );
-        MN_end.draw( screen );
-        MN_about.draw( screen );
-        MN_quit.draw( screen );
+        MN_start.draw();
+        MN_join.draw();
+        MN_end.draw();
+        MN_about.draw();
+        MN_quit.draw();
 
         MN_start.handle_events( event );
         MN_join.handle_events( event );

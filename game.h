@@ -10,10 +10,10 @@
 #define GAME_H_INCLUDED
 
 #include "drawengine.h"
-#include "level.h"
 #include "timer.h"
 #include "network.h"
 #include "menu.h"
+#include "level.h"
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
 
@@ -24,13 +24,12 @@ public:
 	bool run();
 	void getInput();
 	void SendData();
-	SDL_Surface* init(SDL_Surface*);
+	bool init();
 	bool load_files();
 	void clean_up();
 	void background_setter( SDL_Surface* );
 	SDL_Surface* background_getter();
 private:
-    bool aufstellung(level);
     SDL_Surface* background;
 };
 

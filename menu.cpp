@@ -31,7 +31,7 @@ bool menu::init()
     }
 }
 
-void menu::draw( SDL_Surface* screen )
+void menu::draw()
 {
     drawengine DE;
     SDL_Surface * message = NULL;
@@ -40,7 +40,7 @@ void menu::draw( SDL_Surface* screen )
     message = TTF_RenderText_Solid( font_getter(), msg.c_str(), active_getter() );
 
     //apply message to screen
-    DE.apply_surface( this->box.x, this->box.y, message, screen, NULL );
+    DE.apply_surface( this->box.x, this->box.y, message,  drawengine::screen_getter(), NULL );
 }
 
 void menu::font_setter( TTF_Font * ttf )

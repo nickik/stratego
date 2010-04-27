@@ -2,12 +2,13 @@
 #define LEVEL_H_INCLUDED
 
 #include "feld.h"
+#include "helper.h"
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
 #include "libxml2/libxml/parser.h"
 #include "libxml2/libxml/xmlmemory.h"
-#include "token.h"
+//#include "token.h"
 #include "drawengine.h"
 
 class level{

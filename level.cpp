@@ -127,32 +127,54 @@ bool level::feldadd(std::string team, int id, std::string spielfigur)
     {
         t = empty;
     }
-
     figur f;
-    f = string_to_figur(spielfigur);
+    if( t != empty )
+    {
+        f = string_to_figur(spielfigur);
+    }
 
-    koordinaten k;
+    int x;
+    int y;
+
     if(id <= 100 or id >= 0)
     {
-        k.x = id % 10;
-        k.y = (id - k.x)/10;
+        y = id / 10;
+        if( id % 10 > 0)
+        {
+             y++;
+        }
+        if( id % 10 == 0 )
+        {
+            x = 10;
+        }
+        else
+        {
+            x = id % 10;
+        }
     }
 
     boden b = land;
-    if(k.x >= 5 and k.x <= 6)
+    if(x >= 5 and x <= 6)
     {
-        if(k.y >= 2 and k.y <= 3)
+        if(y >= 2 and y <= 3)
             b = wasser;
 
-        if(k.y >= 7 and k.y <= 8)
+        if(y >= 7 and y <= 8)
             b = wasser;
     }
 
     if(b == land)
     {
-        spielfeld[k.x][k.y] = feld(b, k, token(f,t));
+        if( t == empty )
+        {
+            spielfeld[x][y]  = feld(b, x, y);
+        }
+        else
+        {
+            spielfeld[x][y] = feld(b, x, y, token(f,t));
+        }
     }else{
-        spielfeld[k.x][k.y]  = feld(b, k);
+        spielfeld[x][y]  = feld(b, x, y);
     }
 
     return true;
@@ -197,7 +219,10 @@ bool level::draw_spielfeld()
         for(int n=0;n!=10;n++){
             if(spielfeld[i][n].stein_getter() == true)
             {
-                //de.draw_token(i,n, (spielfeld[i][n].spielstein_getter()));
+                feld f = spielfeld[i][n];
+                int x = i;
+                int y = n;
+                //de.draw_token(x, y, f, f.spielstein_getter().team_getter());
             }
         }
     }

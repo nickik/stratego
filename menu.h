@@ -14,7 +14,7 @@ public:
     virtual ~menu();
     bool init();
 	void font_setter( TTF_Font* );
-	void draw( SDL_Surface* );
+	void draw();
 //    button( int, int, int, int );
     void handle_events( SDL_Event );
 	TTF_Font* font_getter();

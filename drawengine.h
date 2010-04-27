@@ -1,9 +1,7 @@
 #ifndef DRAWENGINE_H_INCLUDED
 #define DRAWENGINE_H_INCLUDED
 
-//#include "token.h"
-//#include "feld.h"
-//#include "level.h"
+#include "globals.h"
 #include "helper.h"
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"

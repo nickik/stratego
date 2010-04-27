@@ -35,8 +35,9 @@ void game::clean_up()
 
 bool game::load_files()
 {
+    drawengine de;
     //Load the dot image
-    background_setter(drawengine::load_image( "background.png" ));
+    background_setter(de.load_image( "background.png" ));
 
     //If there was a problem in loading the dot
     if( background_getter() == NULL )
@@ -61,8 +62,9 @@ bool game::init()
         return false;
     }
 
+    drawengine de;
     //Set up the screen
-    token_image = drawengine::load_image( "tokens.png" );
+    token_image = de.load_image( "tokens.png" );
     screen =  SDL_SetVideoMode( SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE );
 
     set_token_clips();

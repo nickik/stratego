@@ -29,6 +29,7 @@ public:
 	bool load_files();
 	void clean_up();
 	void background_setter( SDL_Surface* );
+	void set_token_clips();
 	SDL_Surface* background_getter();
 private:
     SDL_Surface* background;
